@@ -1,0 +1,52 @@
+{
+    "name": "InputSystem",
+    "maps": [
+        {
+            "name": "Floor",
+            "id": "f790c229-7cf5-4bea-aa81-9cadb5b1cd10",
+            "actions": [
+                {
+                    "name": "JSR",
+                    "type": "Value",
+                    "id": "907fd651-549c-4ba0-9cac-c19cf1788fc9",
+                    "expectedControlType": "Axis",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "JSL",
+                    "type": "Value",
+                    "id": "cbeb29c5-a289-439c-a8ad-46a1cf00c848",
+                    "expectedControlType": "Axis",
+                    "processors": "",
+                    "interactions": ""
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "61795a37-9184-446d-9224-66dca3a9be10",
+                    "path": "<Gamepad>/leftStick/right",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "JSR",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "44759000-2719-4664-91e2-e24800ec9310",
+                    "path": "<Gamepad>/leftStick/left",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "JSL",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}
