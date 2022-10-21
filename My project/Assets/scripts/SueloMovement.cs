@@ -3,14 +3,18 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-public class PlayerMovement : MonoBehaviour
+public class SueloMovement : MonoBehaviour
 {
 
+    
     Rigidbody suelo;
-    [SerializeField]float rotacionR=10f;
-    [SerializeField]float rotacionL =10f;
-    [SerializeField]float mov=5.4f;
     InputSystem inputActions;
+    [SerializeField]float rotacionR;
+    [SerializeField]float rotacionL;
+    [SerializeField]float mov;
+    [SerializeField]Vector3 rightTorque;
+    [SerializeField]Vector3 leftTorque;
+
 
     // Start is called before the first frame update
 
@@ -30,28 +34,36 @@ public class PlayerMovement : MonoBehaviour
 
     void Start()
     {
-        MoverSuelo();
+        
         suelo = GetComponent<Rigidbody>();
 
-        mov = 1f;
+        mov = 1.2f;
+
     }
 
     // Update is called once per frame
     void FixedUpdate()
     {
         
-        print(rotacionR);
-        print(rotacionL);
-
-
+        
+        MoverSuelo();
+       
     }
     private void MoverSuelo()
     {
-        suelo.AddTorque(transform.right * rotacionR*mov);
-        suelo.AddTorque(-transform.right * rotacionL*mov);
+         rightTorque = Vector3.right * rotacionR * mov;
+         leftTorque= Vector3.forward * rotacionL * mov;
+        suelo.AddTorque(rightTorque);
+        suelo.AddTorque(-leftTorque);
+        
+        //transform.eulerAngles = new Vector3(0f, 0f, rotacionR * -60f);
+        
 
 
     }
+  
+
+
     private void OnEnable()
     {
         inputActions.Enable();
