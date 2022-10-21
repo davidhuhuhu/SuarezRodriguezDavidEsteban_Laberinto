@@ -17,5 +17,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Laberinto_3.unity
     guid: b66c0268fe973d6428754e142339c508
+  - enabled: 1
+    path: Assets/Scenes/end.unity
+    guid: 26b5a2266ff264840beb5530a128a2c7
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: 14398d21ddbf8304c918c5a027910628, type: 2}
