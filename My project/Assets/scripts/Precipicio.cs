@@ -23,7 +23,7 @@ public class Precipicio : MonoBehaviour
             sceneToGO = currentScene;
 
         }
-        else if(currentScene <2)
+        else if(currentScene <3)
         {
             sceneToGO = currentScene + 1;
 
@@ -32,7 +32,7 @@ public class Precipicio : MonoBehaviour
         else
         {
 
-            sceneToGO = 3;
+            sceneToGO = 4;
 
         }
         print("Escena siguiente: " + sceneToGO);
